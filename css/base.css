@@ -1,0 +1,67 @@
+
+/* Aquí se definen los estilos generales y la atmósfera del lugar.
+   Todo tiene un toque pixelado y misterioso. */
+
+body {
+  font-family: 'Press Start 2P', cursive;
+  background: url('../tarotista2.png') no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden;
+  color: #fff8e1;
+  text-align: center;
+  position: relative;
+}
+
+/* Marco pixelado mágico alrededor de toda la pantalla */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 15px solid #632063; /* borde principal */
+  pointer-events: none;        /* no bloquea clicks */
+  box-sizing: border-box;
+  z-index: 1000;               /* encima del fondo pero detrás de contenido */
+  
+  /* efecto de sombra pixelada */
+  box-shadow:
+    inset 0 0 0 3px #000,    /* borde interior negro */
+    0 0 10px #610d61,        /* resplandor exterior rosa */
+    0 0 20px #3c1f3c,        /* resplandor más intenso */
+    0 0 30px #8f158f;        /* halo final */
+  
+  /* opcional: un filtro de difuminado sutil */
+  filter: blur(1px);
+}
+
+
+/* Botón pixelado general */
+.pixel-btn {
+  font-family: 'Press Start 2P', cursive;
+  background: #3a005f;
+  border: 4px solid #ff00ff;
+  color: #fff;
+  padding: 12px 20px;
+  text-transform: uppercase;
+  box-shadow: 0 0 0 2px #000, 4px 4px 0 #000, 0 0 10px #ff00ff;
+  transition: all 0.3s ease;
+}
+.pixel-btn:hover {
+  background: #550088;
+  border-color: #ff66ff;
+  box-shadow: 0 0 20px #ff66ff;
+  transform: scale(1.05);
+}
+
+#header-text {
+  margin-top: 20px;
+  font-size: 10px;
+  line-height: 1.6;
+  display: inline-block;
+  background: rgba(0,0,0,0.7);
+  padding: 20px;
+  border: 3px solid #ff00ff;
+  border-radius: 12px;
+}

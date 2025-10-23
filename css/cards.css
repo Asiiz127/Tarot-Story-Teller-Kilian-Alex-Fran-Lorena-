@@ -1,0 +1,47 @@
+/* Aquí están los estilos de las cartas del tarot y su movimiento en círculo.
+   Las cartas se ven como si flotaran, aunque podríamos trabajar un poco más la animación. */
+
+#center-area {
+  position: absolute;
+  top: 380%; /*jugué con este valor hasta conseguir la posicion inicial de las cartas 
+  porque se salian fuera de pantalla XD*/
+  left: 45%; /*con este hice lo mismo, para que giren alrededor de la bola más o menos*/
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 600px;
+}
+
+.tarot-card {
+  position: absolute;
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  left: 50%;
+  top: 50%;
+  border: 3px solid #ff00ff;
+  border-radius: 6px;
+  box-shadow: 0 0 0 2px #000;
+  transition: all 0.5s ease;
+   pointer-events: none; /* Las cartas no interceptan clics */
+}
+
+.selected-card {
+  z-index: 200;
+  transform: scale(2) translate(-50%, -50%) !important;
+  transition: all 0.8s ease;
+}
+
+.fade-out {
+  opacity: 0;
+  transform: scale(0.5);
+  transition: all 0.6s ease;
+}
+
+#predict-container {
+  position: absolute;
+  bottom: -600px; /*cacharreando llegue a este valor porque sino se me salia fuera de la pantalla*/
+  left: 80%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+
