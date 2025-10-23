@@ -1,6 +1,4 @@
-// modal.js
-// Controla la parte donde se eligen las cartas al azar y aparece el mensaje del futuro.
-
+// Controla la parte donde se eligen las cartas al azar y aparece el mensaje del futuro. Aún hay que aplicarle JS
 import { detenerCarrusel, reanudarCarrusel } from "./cards.js";
 
 // Muestra el modal con las cartas seleccionadas

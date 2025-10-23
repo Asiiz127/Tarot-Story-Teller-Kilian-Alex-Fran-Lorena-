@@ -12,8 +12,7 @@ export const prepararCartas = () => {
   // Paso 1: colocamos todas las cartas en un punto de inicio, abajo por ejemplo, cerca de la mano de la tarotista
   cartas.forEach(carta => {
     carta.style.left = '50%';
-    carta.style.top = '70%'; // punto de partida ajustable
-    carta.style.opacity = 0;
+    carta.style.top = '70%'; // punto de partida ajustable (ver en CSS referencias)
     carta.style.transition = 'all 1s ease';
     carta.style.transform = 'translate(-50%, -50%)';
   });

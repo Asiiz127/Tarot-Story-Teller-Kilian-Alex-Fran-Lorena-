@@ -1,7 +1,7 @@
-// curtains.js
-// Este archivo controla las “cortinas” del inicio.
-// Cuando el usuario hace clic en "Entrar", las cortinas se abren con una animación.
-// Luego aparece el contenido principal de la habitación.
+
+/*Este archivo controla las “cortinas” del inicio.
+ Cuando el usuario hace clic en "Entrar", las cortinas se abren con una animación.
+Luego aparece el contenido principal de la habitación.*/
 
 export const abrirCortinas = (body, enterContainer, roomContent, callback) => {
   // Añadimos la clase que hace que las cortinas se abran con CSS.
