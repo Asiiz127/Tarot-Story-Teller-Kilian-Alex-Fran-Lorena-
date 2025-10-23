@@ -1,0 +1,15 @@
+.square{
+width: 100%;
+max-width: 400px;
+aspect-ratio: 1/1;
+display: flex;
+justify-content: center;
+background-image: url('../ABOUTUS/fondo/cartaFondo.png');
+background-repeat: no-repeat;
+background-size:cover;
+back
+border: 1px solid black;
+  border-radius: 8px;
+ 
+
+}
