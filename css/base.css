@@ -50,8 +50,8 @@ transform: scale(1.05);
 
 /* Header text */
 #header-text {
-margin: 20px auto;
-font-size: 10px;
+margin: 10px auto;
+font-size: 15px;
 line-height: 1.6;
 display: inline-block;
 background: rgba(0,0,0,0.7);
