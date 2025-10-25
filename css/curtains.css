@@ -1,65 +1,21 @@
-/* Las cortinas cubren la habitación al inicio y se abren al hacer clic.
-   Dan la sensación de que estás entrando en un teatro o ritual secreto. */
-
-/* Cortinas con pliegues y animación ondulante para dar sensación de tela real */
+/* curtains.css */
 .curtain {
-  position: fixed;
-  top: 0;
-  height: 100vh;
-  width: 50%;
-
-  /* Repeating gradient simulando pliegues verticales. Utilizé el mismo ejemplo que el proyecto de
-  "efecto de barajar cartas" que Hans nos mandó de CODEPEN */
-  background: repeating-linear-gradient(
-    130deg,          /* dirección para pliegues */
-    #54095b 0px,    /* tono oscuro*/
-    #570c5c 8px,    /* ancho del pliegue oscuro */
-    #090214 8px,    /* tono más claro para dar volumen */
-    #3c1a7a 48px    /* ancho total de cada pliegue */
-  );
-
-  transition: transform 2.5s ease-in-out;
-  z-index: 300;
-
-  /* Sombra interior para dar sensación de profundidad */
-  box-shadow: inset -30px 0 50px rgba(0,0,0,0.7);
-
-  /* Animación de ondulación ligera, como si la tela se moviera NO FUNCIONA, HAY QUE INVESTIGAR*/
-  animation: foldWave 5s infinite ease-in-out;
+position: fixed;
+top: 0;
+height: 100vh;
+width: 50%;
+background: repeating-linear-gradient(130deg, #54095b 0px, #570c5c 8px, #090214 8px, #3c1a7a 48px);
+transition: transform 2.5s ease-in-out;
+z-index: 300;
+box-shadow: inset -30px 0 50px rgba(0,0,0,0.7);
+animation: foldWave 5s infinite ease-in-out;
 }
-
-/* Animación que desplaza el patrón de pliegues suavemente NO FUNCIONA */
-@keyframes foldWave {
-  0% { background-position: 0 0; }
-  50% { background-position: 5px 0; } /* amplitud del movimiento */
-  100% { background-position: 0 0; }
-}
-
-/* Cortina izquierda con borde y sombra extra para profundidad */
-#curtain-left {
-  left: 0;
-  border-bottom-right-radius: 50% 20%;
-  box-shadow: inset -30px 0 50px rgba(0,0,0,0.7),
-              inset -5px 0 15px rgba(0,0,0,0.5); /* sombra extra para pliegues */
-}
-
-/* Cortina derecha con borde y sombra extra para profundidad */
-#curtain-right {
-  right: 0;
-  border-bottom-left-radius: 50% 20%;
-  box-shadow: inset 30px 0 50px rgba(0,0,0,0.7),
-              inset 5px 0 15px rgba(0,0,0,0.5); /* sombra extra para pliegues */
-}
-
-/* Cuando se abren las cortinas, se desplazan hacia los lados */
+@keyframes foldWave { 0% { background-position: 0 0; } 50% { background-position: 5px 0; } 100% { background-position: 0 0; } }
+#curtain-left { left: 0; border-bottom-right-radius: 50% 20%; box-shadow: inset -30px 0 50px rgba(0,0,0,0.7), inset -5px 0 15px rgba(0,0,0,0.5); }
+#curtain-right { right: 0; border-bottom-left-radius: 50% 20%; box-shadow: inset 30px 0 50px rgba(0,0,0,0.7), inset 5px 0 15px rgba(0,0,0,0.5); }
 .curtains-open #curtain-left { transform: translateX(-100%); }
 .curtains-open #curtain-right { transform: translateX(100%); }
 
-/* Botón de entrada centrado "sobre" las cortinas */
-#enter-container {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 400;
-}
+
+/* enter button */
+#enter-container { position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 999; }

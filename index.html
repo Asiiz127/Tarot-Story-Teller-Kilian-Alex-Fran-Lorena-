@@ -17,6 +17,10 @@
   <link rel="stylesheet" href="css/cards.css">
   <link rel="stylesheet" href="css/modal.css">
   <link rel="stylesheet" href="css/candle.css">
+  <link rel="stylesheet" href="css/contact.css">
+
+  <!-- Estilos del efecto llama (módulo) -->
+  <link rel="stylesheet" href="flame/flame.css">
 </head>
 <body>
 
@@ -29,46 +33,55 @@
     <button id="enter-btn" class="pixel-btn">¿Entrar a la habitación?</button>
   </div>
 
-  <!-- CONTENIDO PRINCIPAL (oculto hasta que se abren las cortinas) -->
+  <!-- CONTENEDOR PADRE PRINCIPAL (oculto hasta que se abren las cortinas) -->
   <div id="room-content" class="d-none">
 
-    <!-- TEXTO SUPERIOR -->
-    <div id="header-text" class="pixel-text text-center">
-      Has entrado a un lugar místico.<br>
-      Todo puede ocurrir aquí adentro.<br>
-      ¿Estás preparado?
-    </div>
+    <!-- Wrapper que agrupa TODO lo que no forma parte de las cortinas ni del boton entrar -->
+    <div id="room-wrapper">
 
-    <!-- ÁREA CENTRAL (cartas giratorias) TODAS CON LA RUTA Proyect/img/ para poder almacenarlas en una carpeta-->
-    <div id="center-area">
-      <div id="orbit">
-        <img src="Proyect/img/death.png" class="tarot-card pixelated" alt="Death">
-        <img src="Proyect/img/emperor.png" class="tarot-card pixelated" alt="Emperor">
-        <img src="Proyect/img/empress.png" class="tarot-card pixelated" alt="Empress">
-        <img src="Proyect/img/fool.png" class="tarot-card pixelated" alt="Fool">
-        <img src="Proyect/img/hermit.png" class="tarot-card pixelated" alt="Hermit">
-        <img src="Proyect/img/hierophant.png" class="tarot-card pixelated" alt="Hierophant">
-        <img src="Proyect/img/magician.png" class="tarot-card pixelated" alt="Magician">
-        <img src="Proyect/img/priestess.png" class="tarot-card pixelated" alt="Priestess">
+      <!-- Llamas / efectos -->
+      <div id="flame-module"> <!-- el contenido real lo controla flame/flame.js + flame.css -->
+        <!-- markup si lo necesita el módulo -->
       </div>
-    </div>
 
-    <!-- BOTÓN DE PREDICCIÓN -->
-    <div id="predict-container">
-      <button id="predict-btn" class="pixel-btn">🔮 Predecir el futuro</button>
-    </div>
-
-    <!-- VELA ANIMADA -->
-    <div id="candle-container">
-      <div class="candle">
-        <div class="flame"></div>
-        <div class="wick"></div>
-        <div class="wax"></div>
-        <div class="light-glow"></div>
+      <!-- TEXTO SUPERIOR -->
+      <div id="header-text" class="pixel-text text-center">
+        Has entrado a un lugar místico.<br>
+        Aquí adentro, puede ocurrir de todo.<br>
+        ¿Estás preparado?
       </div>
-    </div>
 
-  </div>
+      <!--
+        ÁREA CENTRAL: contenedor relativo que contiene el orbit (tarot cards)
+        El orbit es el elemento sobre el que trabaja cards.js para posicionar las cartas.
+      -->
+      <div id="center-area">
+        <div id="orbit">
+          <img src="Proyect/img/death.png" class="tarot-card pixelated" alt="Death">
+          <img src="Proyect/img/emperor.png" class="tarot-card pixelated" alt="Emperor">
+          <img src="Proyect/img/empress.png" class="tarot-card pixelated" alt="Empress">
+          <img src="Proyect/img/fool.png" class="tarot-card pixelated" alt="Fool">
+          <img src="Proyect/img/hermit.png" class="tarot-card pixelated" alt="Hermit">
+          <img src="Proyect/img/hierophant.png" class="tarot-card pixelated" alt="Hierophant">
+          <img src="Proyect/img/magician.png" class="tarot-card pixelated" alt="Magician">
+          <img src="Proyect/img/priestess.png" class="tarot-card pixelated" alt="Priestess">
+        </div>
+      </div>
+
+      <!-- BOTONES: Predecir + Contacto -->
+      <div id="controls">
+        <div id="predict-container">
+          <button id="predict-btn" class="pixel-btn">Predecir el futuro</button>
+        </div>
+
+        <div id="contact-container">
+          <button id="contact-btn" class="pixel-btn">Contacto</button>
+        </div>
+      </div>
+
+    </div> <!-- /#room-wrapper -->
+
+  </div> <!-- /#room-content -->
 
   <!-- MODAL DE PREDICCIÓN -->
   <div id="prediction-modal" class="modal-overlay d-none">
@@ -78,12 +91,32 @@
     </div>
   </div>
 
+  <!-- MODAL DE CONTACTO -->
+  <div id="contact-modal" class="contact-overlay d-none">
+    <div class="contact-content">
+      <span id="close-contact" class="close-btn">&times;</span>
+      <div class="contact-text">
+        Si quieres contactarnos, dispón de una bola de cristal, un hueso de cabra, una pluma de cuervo, sal marina y una hoja de pergamino.<br><br>
+        Escribe tu mensaje en el pergamino con tinta negra mientras recitas las palabras <b>"oculus poculus"</b> en bucle y luego quémalo.<br><br>
+        Nada de e-mails, ni teléfonos ni nada.
+      </div>
+    </div>
+  </div>
+
   <!-- AUDIO AMBIENTAL -->
   <audio id="musicaAmbiental" loop>
     <source src="musicaAmbientalTarot.mp3" type="audio/mpeg">
   </audio>
 
-  <!-- SCRIPTS -->
+  <!-- JS del módulo de contacto -->
+  <script src="js/contact.js" defer></script>
+
+  <!-- JS del módulo de la llama -->
+  <script src="flame/flame.js" defer></script>
+
+  <!-- SCRIPTS principales (modulares) -->
+  <script type="module" src="js/curtains.js"></script>
+  <script type="module" src="js/cards.js"></script>
   <script type="module" src="js/main.js"></script>
 </body>
 </html>
