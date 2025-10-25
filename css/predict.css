@@ -1,0 +1,29 @@
+/* predict.css */
+
+/* Contenedor del botón para posicionarlo a la derecha y separado del borde */
+#predict-container {
+  position: absolute;       /* Posicionamiento respecto al contenedor padre */
+  top: 50%;                 /* Centrado vertical */
+  right: 10px;              /* Separado del borde derecho */
+  transform: translateY(-50%); /* Ajusta para que quede centrado exactamente */
+  z-index: 10;              /* Por si hay otros elementos encima */
+}
+
+/* Botón Predecir el futuro */
+#predict-btn {
+  font-size: 1.2rem;        /* Más grande que el original */
+  padding: 1rem 2rem;       /* Más grande y con espacio interno cómodo */
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+/* Efecto hover para dar sensación interactiva */
+#predict-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 255, 200, 0.7);
+}
+
+/* Mantener estilo pixel art si quieres */
+.pixel-btn#predict-btn {
+  font-family: 'Press Start 2P', cursive;
+}

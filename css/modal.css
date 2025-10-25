@@ -16,9 +16,23 @@ background: rgba(20,0,30,0.95);
 border: 3px solid #ff00ff;
 padding: 30px;
 border-radius: 15px;
-width: 400px;
+width: 800px;
 text-align: center;
 color: #fff8e1;
 position: relative;
 }
 .close-btn { position: absolute; top: 10px; right: 15px; font-size: 24px; cursor: pointer; }
+
+/* modal.css o predict.css */
+
+#prediction-text {
+  max-width: 900px;       /* o el ancho que quieras */
+  margin: 0 auto;          /* centrar horizontal */
+  padding: 10px 20px;      /* espacio interno */
+  white-space: normal;     /* permite que el texto se ajuste automáticamente */
+  text-align: left;        /* alineado a la izquierda para lectura más natural */
+  font-size: 1rem;
+  line-height: 1.5em;      /* espacio entre líneas */
+  word-wrap: break-word;   /* evita que se salga del contenedor */
+  color:aqua
+}
