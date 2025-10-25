@@ -33,3 +33,8 @@ NOTAS DE KILIAN:
 
 He cambiado un poco las cortinas, la animación de giro, el borde, y DIVIDIDO el proyecto en subcarpetas
 teniendo en cuenta lo aprendido en clase de cara a modificar cualquier cosa.
+------------------------------------------------------------------------------------------
+NOTAS DE FRAN:
+23/10/25
+
+He incorporado cambios en la carpeta ABOUTUS: GridSystem, encuadramiento, fondos de interfaz y cartas, y descripciones de cartas.
