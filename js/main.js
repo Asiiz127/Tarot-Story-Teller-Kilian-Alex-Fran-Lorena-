@@ -117,7 +117,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* Función para reproducir el sonido de la bola de cristal */
-const reproducirSonidoBola = () => {
-  var sonido = new Audio('Proyect/media/rolling-ball.mp3');
-  sonido.play();
-}
+const glassball = document.getElementById("glassball");
+glassball.onclick = reproducirSonidoBola();
+
+function reproducirSonidoBola() {
+  const sound = new Audio("Proyect/media/rolling-ball.mp3");
+  sound.play().catch(error => {
+    console.log("No se pudo reproducir el sonido:", error);
+  });
+};

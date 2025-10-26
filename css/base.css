@@ -75,7 +75,7 @@ z-index: 200; /* por encima de fondo y debajo de cortinas */
 }
 
 /* Contenedor del botón de la bola de cristal */
-#crystal-btn-invisible {
+#glassball {
   position: absolute;
   left: 360px;   /* Ajusta según tu fondo */
   top: 580px;    /* Ajusta según tu fondo */
