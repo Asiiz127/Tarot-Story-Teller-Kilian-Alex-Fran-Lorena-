@@ -146,3 +146,14 @@ predictionText.innerHTML = mensajeFinal;
   // Ajuste de cartas al redimensionar la ventana
   window.addEventListener('resize', () => prepararCartas());
 });
+
+/* Función para reproducir el sonido de la bola de cristal */
+const glassball = document.getElementById("glassball");
+glassball.onclick = reproducirSonidoBola();
+
+function reproducirSonidoBola() {
+  const sound = new Audio("Proyect/media/rolling-ball.mp3");
+  sound.play().catch(error => {
+    console.log("No se pudo reproducir el sonido:", error);
+  });
+};

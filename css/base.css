@@ -74,6 +74,62 @@ gap: 18px;
 z-index: 200; /* por encima de fondo y debajo de cortinas */
 }
 
+/* Contenedor del botón de la bola de cristal */
+#glassball {
+  position: absolute;
+  left: 360px;   /* Ajusta según tu fondo */
+  top: 580px;    /* Ajusta según tu fondo */
+  width: 160px;  /* Ajusta al tamaño de la bola */
+  height: 215px; /* Ajusta al tamaño de la bola */
+  z-index: 2500;
+  cursor: pointer;
+  background: none;
+  border: none;
+  opacity: 0;
+}
 
 /* Controles (predict + contact) */
 .pixel-btn { padding: 8px 12px; font-size: 11px; }
+
+#bottom-controls {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  z-index: 3000;
+  box-sizing: border-box;
+  margin:5px;
+}
+
+.left-controls {
+  display: flex;
+  gap: 18px; /* Espacio entre Contacto y About Us */
+}
+
+.right-controls {
+  display: flex;
+  gap: 18px; /* Espacio entre botones si hay más en el futuro */
+}
+
+@media (max-width: 700px) {
+  #bottom-controls {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0 10px;
+    bottom: 10px;
+  }
+  .left-controls, .right-controls {
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    text-align: center;
+}
