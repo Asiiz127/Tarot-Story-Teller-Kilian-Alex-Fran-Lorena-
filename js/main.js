@@ -149,7 +149,7 @@ predictionText.innerHTML = mensajeFinal;
 
 /* Función para reproducir el sonido de la bola de cristal */
 const glassball = document.getElementById("glassball");
-glassball.onclick = reproducirSonidoBola();
+glassball.onclick = reproducirSonidoBola;
 
 function reproducirSonidoBola() {
   const sound = new Audio("Proyect/media/rolling-ball.mp3");
