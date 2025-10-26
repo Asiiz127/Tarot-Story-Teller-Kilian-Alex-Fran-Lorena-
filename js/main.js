@@ -115,3 +115,9 @@ document.addEventListener('DOMContentLoaded', () => {
    para que el diseño no se desacomode. */
   window.addEventListener('resize', () => prepararCartas());
 });
+
+/* Función para reproducir el sonido de la bola de cristal */
+const reproducirSonidoBola = () => {
+  var sonido = new Audio('Proyect/media/rolling-ball.mp3');
+  sonido.play();
+}
