@@ -38,3 +38,15 @@ NOTAS DE FRAN:
 23/10/25
 
 He incorporado cambios en la carpeta ABOUTUS: GridSystem, encuadramiento, fondos de interfaz y cartas, y descripciones de cartas.
+
+
+---------------------------------------------------------------------------------------
+25/10/2025
+
+NOTAS DE KILIAN
+
+Faltaría:
+- agregar las llamas a las velas (poner una imagen de fondo sin las velas) y ponerles un event onclick para ocultar la llama y por ende parecerá que las velas están apagadas
+- poner efectos sonoros
+- refactorizar/limpiar un poco el código
+
